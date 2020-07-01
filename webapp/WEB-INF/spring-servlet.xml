@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+	xmlns:mvc="http://www.springframework.org/schema/mvc">
+
+	<!-- annotation 설정을 하겠다. -->
+	<context:annotation-config />
+	
+	<!-- 
+	com.javaex.controller 패키지 밑에 있는 클래스 중에
+	@Controller를 달고 있는 클래스의 객체를 생성 하겠다. (new 하겠다)
+	 -->
+	<context:component-scan base-package="com.javaex.controller" />
+	<!-- 
+		톰켓을 통해 localhost:8088/hellospring2까지는 설정을 했지만 그 뒤에 대한 설정이 필효함
+		이전에는 servlet으로 만들었기 servlet에서 처리되었지만 지금은 class 파일로 만들기 때문에 
+		접근할 class 파일의 위치를 잡아준다 생각해도 좋을 듯
+	 -->
+	
+
+</beans>
